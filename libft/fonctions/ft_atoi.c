@@ -6,9 +6,25 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:31:48 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/25 18:36:45 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/21 19:47:02 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
+
+void	check_overflow(long long output, int sign)
+{
+	if (output * sign > 2147483647)
+	{
+		write(1, "Error\n", 5);
+		exit (0);
+	}
+	else if (output * sign < -2147483648)
+	{
+		write(1, "Error\n", 5);
+		exit (0);
+	}
+}
 
 int	ft_atoi(const char *nptr)
 {
@@ -31,10 +47,7 @@ int	ft_atoi(const char *nptr)
 	{
 		output = nptr[i] - '0' + (output * 10);
 		i++;
-		if (output * sign > 2147483647)
-			return (-1);
-		else if (output * sign < -2147483648)
-			return (0);
+		check_overflow(output, sign);
 	}
 	return (output * sign);
 }

@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/21 15:49:49 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/21 15:50:16 by ajung            ###   ########.fr       */
+/*   Created: 2022/01/21 17:12:00 by ajung             #+#    #+#             */
+/*   Updated: 2022/01/21 19:28:31 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int	main(void)
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include "../libft/libft.h"
+
+typedef struct s_listps
 {
-	printf("test");
-}
+	int		content;
+	int 	index;
+	t_list	*next;
+}				t_listps;
+
+void		parsing(int argc, char **argv);
+t_listps	*ft_lstnew_ps(int content, int index);
+void		ft_lstadd_back_ps(t_listps **alst, t_listps *new);
+
+
+
+
+#endif
