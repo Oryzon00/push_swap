@@ -27,3 +27,8 @@ programme recoit liste de int en param
 if no param, exit
 display les instructions, separes par un /n
 cas error, display "Error\n": doublon, autre chose que int, int overflow
+
+
+Parsing:
+Faire 2 cas -> recois plein de argv
+Ou un seul argv qui est un long char *
