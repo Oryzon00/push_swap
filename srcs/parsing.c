@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:11:40 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/24 21:08:50 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/24 21:32:17 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	parse_one(char *str, t_list_ps **list)
 	ret_split = ft_split(str, ' ');
 	if (ret_split[0] == NULL)
 		exit (0);
-	check_error(ret_split);
+	if	(check_error(ret_split) == -1)
+		free_split(ret_split);
 	*list = ft_lstnew_ps(ft_atoi(ret_split[0]), 0);
 	i = 1;
 	while(ret_split[i])
@@ -43,7 +44,8 @@ void parse_multiple(char **argv, t_list_ps **list)
 
 	if (!argv[1][0])
 		exit (0);
-	check_error(&(argv[1]));
+	if (check_error(&(argv[1])) == -1)
+		exit(0);
 	*list = ft_lstnew_ps(ft_atoi(argv[0]), 0);
 	i = 1;
 	while (argv[i])

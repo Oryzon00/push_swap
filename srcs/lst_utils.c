@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:19:05 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/24 20:54:58 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/24 21:11:34 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,26 +40,30 @@ void	ft_lstadd_back_ps(t_list_ps **list, t_list_ps *new)
 		*list = new;
 }
 
-
-// void	ft_lstdelone(t_list_ps *lst)
+// int	ft_lstsize(t_list *lst)
 // {
-// 	if (lst)
+// 	int	i;
+
+// 	i = 0;
+// 	while (lst)
 // 	{
-// 		free(lst);
+// 		lst = lst->next;
+// 		i++;
 // 	}
+// 	return (i);
 // }
 
-// void	ft_lstclear(t_list_ps **lst)
+// void	ft_lstadd_front(t_list **alst, t_list *new)
 // {
-// 	t_list_ps	*next_elem;
+// 	new->next = *alst;
+// 	*alst = new;
+// }
 
-// 	if (lst || !(*lst))
-// 		return ;
-// 	while (*lst && lst)
+// t_list	*ft_lstlast(t_list *lst)
+// {
+// 	while (lst && lst->next)
 // 	{
-// 		next_elem = (*lst)->next;
-// 		ft_lstdelone(*lst);
-// 		*lst = next_elem;
+// 		lst = lst->next;
 // 	}
-// 	lst = NULL;
+// 	return (lst);
 // }

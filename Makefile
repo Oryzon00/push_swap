@@ -3,7 +3,12 @@ SRCS =	srcs/main.c \
 		srcs/lst_utils.c \
 		srcs/check_error.c \
 		srcs/free_list.c \
+		srcs/operateur/push.c \
+		srcs/operateur/swap.c \
+		srcs/operateur/rotate.c \
+		srcs/operateur/reverse_rotate.c \
 		
+
 
 OBJ = $(SRCS:.c=.o)
 

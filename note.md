@@ -28,4 +28,5 @@ programme recoit liste de int en param
 
 coder les operateurs
 
-coder fonction free liste
+
+LEAKS SUR ALLOC SPLIT QUAND ERREUR ATOI!!
