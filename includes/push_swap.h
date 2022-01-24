@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:12:00 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/21 19:28:31 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/24 21:08:38 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,17 @@
 # include <stdlib.h>
 # include "../libft/libft.h"
 
-typedef struct s_listps
+typedef struct s_list_ps
 {
-	int		content;
-	int 	index;
-	t_list	*next;
-}				t_listps;
+	int					content;
+	int 				index;
+	struct s_list_ps	*next;
+}				t_list_ps;
 
-void		parsing(int argc, char **argv);
-t_listps	*ft_lstnew_ps(int content, int index);
-void		ft_lstadd_back_ps(t_listps **alst, t_listps *new);
-
-
-
+void		parse_arg(int argc, char **argv, t_list_ps **list);
+t_list_ps	*ft_lstnew_ps(int content, int index);
+void		ft_lstadd_back_ps(t_list_ps **alst, t_list_ps *new);
+void		check_error(char **str);
+void		free_list(t_list_ps **list);
 
 #endif

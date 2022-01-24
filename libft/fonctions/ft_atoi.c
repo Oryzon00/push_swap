@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:31:48 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/21 19:47:02 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/24 18:30:10 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	check_overflow(long long output, int sign)
 {
 	if (output * sign > 2147483647)
 	{
-		write(1, "Error\n", 5);
+		write(1, "Error\n", 6);
 		exit (0);
 	}
 	else if (output * sign < -2147483648)
 	{
-		write(1, "Error\n", 5);
+		write(1, "Error\n", 6);
 		exit (0);
 	}
 }

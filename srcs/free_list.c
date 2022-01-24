@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   free_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/21 15:49:49 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/24 20:51:10 by ajung            ###   ########.fr       */
+/*   Created: 2022/01/24 19:31:58 by ajung             #+#    #+#             */
+/*   Updated: 2022/01/24 20:59:26 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	free_list(t_list_ps **list)
 {
-	t_list_ps *list;
+	t_list_ps	*next_elem;
 
-	parse_arg(argc, argv, &list);
-	free_list(&list);
+	while((*list)->next)
+	{
+		next_elem = (*list)->next;
+		free(*list);
+		*list = next_elem;
+	}
+	free(*list);
+	list = NULL;
+	exit (0);
 }
