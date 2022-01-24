@@ -1,4 +1,9 @@
-SRCS =	src/main.c \
+SRCS =	srcs/main.c \
+		srcs/parsing.c \
+		srcs/lst_utils.c \
+		srcs/check_error.c \
+		srcs/free_list.c \
+		
 
 OBJ = $(SRCS:.c=.o)
 
@@ -24,7 +29,7 @@ PATH_LIBFT = ./libft
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-			make -C $(PATH_LIBFT) bonus --silent
+			make -C $(PATH_LIBFT) --silent
 			$(CC)  $(CFLAGS) $(OBJ) libft/libft.a -o $(NAME)
 
 clean:

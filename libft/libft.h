@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 18:16:13 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/09 20:57:04 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/24 18:00:13 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 /*3eme partie*/
-typedef struct s_list
+/* typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -75,6 +75,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+*/
 
 /*get_next_line*/
 

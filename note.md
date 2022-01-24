@@ -24,11 +24,8 @@ rrb: reverse rotate b -> descends tous les elems de b de 1, dernier devient prem
 rrr: rra et rrb em meme temps
 
 programme recoit liste de int en param
-if no param, exit
-display les instructions, separes par un /n
-cas error, display "Error\n": doublon, autre chose que int, int overflow
 
 
-Parsing:
-Faire 2 cas -> recois plein de argv
-Ou un seul argv qui est un long char *
+coder les operateurs
+
+coder fonction free liste
