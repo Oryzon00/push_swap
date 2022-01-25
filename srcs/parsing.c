@@ -6,14 +6,13 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:11:40 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/24 21:32:17 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/25 19:19:07 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-
+/*
 void	parse_one(char *str, t_list_ps **list)
 {
 	char		**ret_split;
@@ -36,8 +35,9 @@ void	parse_one(char *str, t_list_ps **list)
 		i++;
 	}
 }
+*/
 
-void parse_multiple(char **argv, t_list_ps **list)
+void	parse_multiple(char **argv, t_list_ps **list)
 {
 	int			i;
 	t_list_ps	*elem;
@@ -46,8 +46,8 @@ void parse_multiple(char **argv, t_list_ps **list)
 		exit (0);
 	if (check_error(&(argv[1])) == -1)
 		exit(0);
-	*list = ft_lstnew_ps(ft_atoi(argv[0]), 0);
-	i = 1;
+	*list = ft_lstnew_ps(ft_atoi(argv[1]), 0);
+	i = 2;
 	while (argv[i])
 	{
 		elem = ft_lstnew_ps(ft_atoi(argv[i]), i);
@@ -60,11 +60,8 @@ void parse_multiple(char **argv, t_list_ps **list)
 
 void	parse_arg(int argc, char **argv, t_list_ps **list)
 {
-	
-	if(argc < 2)
-		exit(0);
-	if (argc == 2)
-		parse_one(argv[1], list);
+	if (argc < 2)
+		exit (0);
 	else
 		parse_multiple(argv, list);
 }

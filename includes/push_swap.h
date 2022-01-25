@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:12:00 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/24 21:31:26 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/25 19:02:55 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ void		ft_lstadd_back_ps(t_list_ps **alst, t_list_ps *new);
 int			check_error(char **str);
 void		free_list(t_list_ps **list);
 void		free_split(char **str);
+void		swap_a(t_list_ps **stack_a);
+void		swap_b(t_list_ps **stack_b);
+
+
 
 
 #endif

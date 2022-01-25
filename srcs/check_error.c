@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 18:23:39 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/24 21:28:45 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/25 19:10:21 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_doublon(char **str)
 	int	j;
 
 	j = 0;
-	while(str[j])
+	while (str[j])
 	{
 		i = 0;
 		while (str[i + j + 1])
@@ -38,20 +38,21 @@ int	check_doublon(char **str)
 int	check_error(char **str)
 {
 	int	i;
-	int j;
+	int	j;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		j = 0;
 		while (str[i][j])
 		{
-			if ('0' <= str[i][j] && str[i][j] <= '9')
+			if (('0' <= str[i][j] && str[i][j] <= '9') || str[i][j] == '+'
+				|| str[i][j] == '-')
 				j++;
 			else
 			{
 				write(1, "Error\n", 6);
-				return (-1);			
+				return (-1);
 			}
 		}
 		i++;
