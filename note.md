@@ -1,7 +1,4 @@
-Makefile
-exec name = push_swap
-No segfault, etc...
-No leaks
+
 fonctions: write, read, malloc, free, exit.
 
 stack a rempli ordre aleatoire de entier positif/negatif sans doublon
@@ -23,10 +20,5 @@ rra: reverse rotate a -> descends tous les elems de a de 1, dernier devient prem
 rrb: reverse rotate b -> descends tous les elems de b de 1, dernier devient premier
 rrr: rra et rrb em meme temps
 
-programme recoit liste de int en param
-
 
 coder les operateurs
-
-
-LEAKS SUR ALLOC SPLIT QUAND ERREUR ATOI!!
