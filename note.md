@@ -21,4 +21,3 @@ rrb: reverse rotate b -> descends tous les elems de b de 1, dernier devient prem
 rrr: rra et rrb em meme temps
 
 
-coder les operateurs
