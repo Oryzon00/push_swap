@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:12:00 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/25 21:05:41 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/25 21:40:58 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,8 @@ void		push_b(t_list_ps **stack_a, t_list_ps **stack_b);
 void		rotate_a(t_list_ps **stack_a);
 void		rotate_b(t_list_ps **stack_b);
 void		rotate_ab(t_list_ps **stack_a, t_list_ps **stack_b);
+void		reverse_rotate_a(t_list_ps **stack_a);
+void		reverse_rotate_b(t_list_ps **stack_b);
+void		reverse_rotate_ab(t_list_ps **stack_a, t_list_ps **stack_b);
 
 #endif

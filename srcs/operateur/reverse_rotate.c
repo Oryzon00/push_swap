@@ -6,13 +6,61 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:15:43 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/25 21:07:18 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/25 21:40:02 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+t_list_ps	*find_avant_dernier(t_list_ps *stack)
+{
+
+	while (stack->next->next)
+		stack = stack->next;
+	return (stack);
+}
+
 void	reverse_rotate_a(t_list_ps **stack_a)
 {
-	
+	t_list_ps	*tmp;
+
+	if (!(*stack_a) && (!(*stack_a)->next))
+		return ;
+	tmp = find_avant_dernier(*stack_a);
+	tmp->next->next = *stack_a;
+	*stack_a = tmp->next;
+	tmp->next = NULL;
+	write(1, "rra\n", 4);
+}
+
+void	reverse_rotate_b(t_list_ps **stack_b)
+{
+	t_list_ps	*tmp;
+
+	if (!(*stack_b) && (!(*stack_b)->next))
+		return ;
+	tmp = find_avant_dernier(*stack_b);
+	tmp->next->next = *stack_b;
+	*stack_b = tmp->next;
+	tmp->next = NULL;
+	write(1, "rrb\n", 4);
+}
+
+void	reverse_rotate_ab(t_list_ps **stack_a, t_list_ps **stack_b)
+{
+	t_list_ps	*tmp;
+
+	if (!(*stack_a) && (!(*stack_a)->next))
+		return ;
+	if (!(*stack_b) && (!(*stack_b)->next))
+		return ;
+	tmp = find_avant_dernier(*stack_a);
+	tmp->next->next = *stack_a;
+	*stack_a = tmp->next;
+	tmp->next = NULL;
+	tmp = find_avant_dernier(*stack_b);
+	tmp->next->next = *stack_b;
+	*stack_b = tmp->next;
+	tmp->next = NULL;
+	write(1, "rrr\n", 4);
 }
