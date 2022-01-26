@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:15:43 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/26 14:34:06 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/26 20:44:06 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 t_list_ps	*find_avant_dernier(t_list_ps *stack)
 {
-
 	while (stack->next->next)
 		stack = stack->next;
 	return (stack);
