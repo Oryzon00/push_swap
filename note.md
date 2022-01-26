@@ -21,3 +21,13 @@ rrb: reverse rotate b -> descends tous les elems de b de 1, dernier devient prem
 rrr: rra et rrb em meme temps
 
 
+2 numbers -> 1 
+3 numbers -> 3
+5 numbers -> 12
+
+100 numbers -> 5 = 700, 4 = 900, 3 = 1100
+500 numbers -> 5 = 5500, 4 = 7000, 3 = 8500
+
+Done! Step 1 : Parsing, put numbers in the stack A if no errors are detected
+Done! Step 2 : Check if the numbers in A are all sorted. If so, end the program 				without printing anything. It’d be preferable to write a function 					A_is_sorted()
+Step 3 : If the size of A ≤ 5, call function sort_small_stack(). Else, call 				function sort_big_stack()

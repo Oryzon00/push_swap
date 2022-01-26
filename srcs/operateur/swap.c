@@ -6,13 +6,13 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:15:52 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/25 21:04:53 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/26 14:32:18 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_a(t_list_ps **stack_a)
+void	sa(t_list_ps **stack_a)
 {
 	int	content_tmp;
 	int	index_tmp;
@@ -28,7 +28,7 @@ void	swap_a(t_list_ps **stack_a)
 	write(1, "sa\n", 3);
 }
 
-void	swap_b(t_list_ps **stack_b)
+void	sb(t_list_ps **stack_b)
 {
 	int	content_tmp;
 	int	index_tmp;
@@ -44,7 +44,7 @@ void	swap_b(t_list_ps **stack_b)
 	write(1, "sb\n", 3);
 }
 
-void	swap_ab(t_list_ps **stack_a, t_list_ps **stack_b)
+void	ss(t_list_ps **stack_a, t_list_ps **stack_b)
 {
 	int	content_tmp;
 	int	index_tmp;
