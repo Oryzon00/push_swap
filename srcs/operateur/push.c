@@ -6,13 +6,13 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:15:24 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/25 21:05:22 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/26 14:32:32 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_a(t_list_ps **stack_a, t_list_ps **stack_b)
+void	pa(t_list_ps **stack_a, t_list_ps **stack_b)
 {
 	t_list_ps	*tmp;
 
@@ -25,7 +25,7 @@ void	push_a(t_list_ps **stack_a, t_list_ps **stack_b)
 	write(1, "pa\n", 3);
 }
 
-void	push_b(t_list_ps **stack_a, t_list_ps **stack_b)
+void	pb(t_list_ps **stack_a, t_list_ps **stack_b)
 {
 	t_list_ps	*tmp;
 
