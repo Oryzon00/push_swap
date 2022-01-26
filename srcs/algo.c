@@ -6,20 +6,20 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:05:39 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/26 20:11:55 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/26 20:40:40 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		find_min(t_list_ps **stack_a)
+int	find_min(t_list_ps **stack_a)
 {
 	t_list_ps	*head;
 	int			min;
-	
+
 	head = *stack_a;
 	min = head->content;
-	while(head)
+	while (head)
 	{
 		if (head->content < min)
 			min = head->content;
@@ -76,8 +76,8 @@ void	solve_5(t_list_ps **stack_a, t_list_ps **stack_b)
 		min = find_min(stack_a);
 		while ((*stack_a)->content != min)
 		{
-			if ((*stack_a)->next->content == min ||
-				(*stack_a)->next->next->content == min)
+			if ((*stack_a)->next->content == min
+				|| (*stack_a)->next->next->content == min)
 				ra(stack_a);
 			else
 				rra(stack_a);
