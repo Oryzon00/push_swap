@@ -7,6 +7,8 @@ SRCS =	srcs/main.c \
 		srcs/operateur/swap.c \
 		srcs/operateur/rotate.c \
 		srcs/operateur/reverse_rotate.c \
+		srcs/algo.c \
+		srcs/solve.c \
 		
 
 

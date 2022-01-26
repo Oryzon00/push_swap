@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:12:00 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/26 16:32:36 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/26 19:07:31 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ t_list_ps	*ft_lstnew_ps(int content, int index);
 void		ft_lstadd_back_ps(t_list_ps **alst, t_list_ps *new);
 int			check_error(char **str);
 void		free_list(t_list_ps **list);
-void		free_split(char **str);
 void		is_sorted(t_list_ps **stack);
 void		what_algo(int argc, t_list_ps **stack_a, t_list_ps **stack_b);
+void		solve(int argc, t_list_ps **stack_a, t_list_ps **stack_b);
+
 
 
 

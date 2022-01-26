@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:19:05 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/26 16:18:42 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/26 16:52:05 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,13 @@ void	ft_lstadd_back_ps(t_list_ps **list, t_list_ps *new)
 
 void	is_sorted(t_list_ps **stack)
 {
-	while ((*stack)->next)
+	t_list_ps *head;
+
+	head = *stack;
+	while (head->next)
 	{
-		if ((*stack)->content < (*stack)->next->content)
-			*stack = (*stack)->next;
+		if (head->content < head->next->content)
+			head = head->next;
 		else
 			return ;
 	}

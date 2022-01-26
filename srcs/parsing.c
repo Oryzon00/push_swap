@@ -6,36 +6,11 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:11:40 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/26 15:19:31 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/26 16:55:15 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*
-void	parse_one(char *str, t_list_ps **list)
-{
-	char		**ret_split;
-	int			i;
-	t_list_ps	*elem;
-
-	ret_split = ft_split(str, ' ');
-	if (ret_split[0] == NULL)
-		exit (0);
-	if	(check_error(ret_split) == -1)
-		free_split(ret_split);
-	*list = ft_lstnew_ps(ft_atoi(ret_split[0]), 0);
-	i = 1;
-	while(ret_split[i])
-	{
-		elem = ft_lstnew_ps(ft_atoi(ret_split[i]), i);
-		if (!elem)
-			exit (0);
-		ft_lstadd_back_ps(list, elem);
-		i++;
-	}
-}
-*/
 
 void	parse_multiple(char **argv, t_list_ps **list)
 {
