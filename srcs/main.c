@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 15:49:49 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/26 16:26:28 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/26 16:54:23 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 
 	parse_arg(argc, argv, &stack_a);
 	is_sorted(&stack_a);
-	
+	what_algo(argc, &stack_a, &stack_b);
 	free_list(&stack_a);
 	free_list(&stack_b);
 }
