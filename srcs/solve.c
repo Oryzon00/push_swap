@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:06:05 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/27 15:34:56 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/27 18:16:43 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,21 @@ void	vide_b(t_list_ps **stack_a, t_list_ps **stack_b)
 
 void	exec_action(t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	
+	(void) stack_a;
+	(void) stack_b;
 }
 
 void	solve(t_list_ps **stack_a, t_list_ps **stack_b, int argc)
 {
 	int	cost;
-	int min_cost;
+	int	min_cost;
 	int	index;
 
-	while (*stack_a) //Tant que A n'est pas vide
+	while (*stack_a)
 	{
 		index = 0;
 		min_cost = 2147483647;
-		while (index < argc - 2) //Pour chaque element de A
+		while (index < argc - 2)
 		{
 			if (get_cost(argc, stack_a, index) < min_cost)
 				min_cost = get_cost(argc, stack_a, index);

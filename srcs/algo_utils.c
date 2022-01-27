@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   algo_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/21 15:49:49 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/27 18:17:15 by ajung            ###   ########.fr       */
+/*   Created: 2022/01/27 18:13:17 by ajung             #+#    #+#             */
+/*   Updated: 2022/01/27 18:13:35 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	get_index(t_list_ps **stack_b, t_list_ps *biggest)
 {
-	t_list_ps	*stack_a;
-	t_list_ps	*stack_b;
+	int			index;
+	t_list_ps	*elem;
 
-	parse_arg(argc, argv, &stack_a);
-	is_sorted(&stack_a);
-	what_algo(argc, &stack_a, &stack_b);
-	free_list(&stack_a);
-	free_list(&stack_b);
+	index = 0;
+	elem = *stack_b;
+	while (elem)
+	{
+		if (elem->content == biggest->content)
+			return (index);
+		index++;
+		elem = elem->next;
+	}
+	return (index);
 }
