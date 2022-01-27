@@ -24,8 +24,10 @@ rrr: rra et rrb em meme temps
 100 numbers -> 5 = 700, 4 = 900, 3 = 1100
 500 numbers -> 5 = 5500, 4 = 7000, 3 = 8500
 
-hardcode solve_5: 
--push dans b les 2 plus petits
--solve 3 dans A
--solve 2 dans B
--push dans A
+fonction  a coder:
+
+-calculer cost pour chaque elem
+	DONE -calculer cost pour mettre au top de A (ra ou rra)
+	-calculer cost pour accueillir/ordonner stack B
+-executer les actions (vider A)
+DONE -vider B

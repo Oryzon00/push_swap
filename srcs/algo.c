@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:05:39 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/27 12:54:19 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/27 15:00:58 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int	find_min(t_list_ps **stack_a)
 	}
 	return (min);
 }
-
-
 
 /*
 Pour solve 3
@@ -111,7 +109,6 @@ void	solve_5(t_list_ps **stack_a, t_list_ps **stack_b)
 
 void	what_algo(int argc, t_list_ps **stack_a, t_list_ps **stack_b)
 {
-	(void) stack_b;
 	if (argc == 3)
 		sa(stack_a);
 	else if (argc == 4)
@@ -121,5 +118,5 @@ void	what_algo(int argc, t_list_ps **stack_a, t_list_ps **stack_b)
 	else if (argc == 6)
 		solve_5(stack_a, stack_b);
 	else
-		solve(argc, stack_a, stack_b);
+		solve(stack_a, stack_b, argc);
 }
