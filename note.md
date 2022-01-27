@@ -28,6 +28,23 @@ fonction  a coder:
 
 -calculer cost pour chaque elem
 	DONE -calculer cost pour mettre au top de A (ra ou rra)
-	-calculer cost pour accueillir/ordonner stack B
+	DONE -calculer cost pour accueillir/ordonner stack B
 -executer les actions (vider A)
 DONE -vider B
+
+
+
+
+
+
+
+
+
+
+
+
+
+// printf("content1 = %d, index1 = %d\n", stack_a->content, stack_a->index);
+// printf("content2 = %d, index2 = %d\n", stack_a->next->content, stack_a->next->index);
+// printf("content1 = %d, index1 = %d\n", stack_a->content, stack_a->index);
+// printf("content2 = %d, index2 = %d\n", stack_a->next->content, stack_a->next->index);

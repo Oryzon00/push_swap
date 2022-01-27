@@ -9,6 +9,7 @@ SRCS =	srcs/main.c \
 		srcs/operateur/reverse_rotate.c \
 		srcs/algo.c \
 		srcs/solve.c \
+		srcs/cost.c \
 		
 
 

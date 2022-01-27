@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:12:00 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/27 15:00:25 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/27 18:23:43 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ void		free_list(t_list_ps **list);
 void		is_sorted(t_list_ps **stack);
 void		what_algo(int argc, t_list_ps **stack_a, t_list_ps **stack_b);
 void		solve(t_list_ps **stack_a, t_list_ps **stack_b, int argc);
+int			get_index(t_list_ps **stack_b, t_list_ps *biggest);
+int			get_cost(int argc, t_list_ps **stack_a, t_list_ps **stack_b, int index);
+
+
 
 /*Operateur*/
 void		sa(t_list_ps **stack_a);
