@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:05:39 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/26 20:40:40 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/27 12:54:19 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	find_min(t_list_ps **stack_a)
 	}
 	return (min);
 }
+
+
 
 /*
 Pour solve 3
@@ -65,6 +67,24 @@ void	solve_3(t_list_ps **stack_a)
 	}
 }
 
+void	solve_4(t_list_ps **stack_a, t_list_ps **stack_b)
+{
+	int	min;
+
+	min = find_min(stack_a);
+	while ((*stack_a)->content != min)
+	{
+		if ((*stack_a)->next->content == min
+			|| (*stack_a)->next->next->content == min)
+			ra(stack_a);
+		else
+			rra(stack_a);
+	}
+	pb(stack_a, stack_b);
+	solve_3(stack_a);
+	pa(stack_a, stack_b);
+}
+
 void	solve_5(t_list_ps **stack_a, t_list_ps **stack_b)
 {
 	int	min;
@@ -96,6 +116,8 @@ void	what_algo(int argc, t_list_ps **stack_a, t_list_ps **stack_b)
 		sa(stack_a);
 	else if (argc == 4)
 		solve_3(stack_a);
+	else if (argc == 5)
+		solve_4(stack_a, stack_b);
 	else if (argc == 6)
 		solve_5(stack_a, stack_b);
 	else
