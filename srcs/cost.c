@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 14:51:55 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/28 18:08:46 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/28 18:54:41 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,16 +59,18 @@ int	cost_order_b(int argc, t_list_ps **stack_b, int value)
 
 	if (!*stack_b)
 	{
-		//dprintf(1, "b est vide, cost order b = 0\n");
+		dprintf(1, "b est vide, cost order b = 0\n");
 		return (0);
 	}
+	//PARFOIS COST ORDER B est = -1??
 	size = argc - 1;
 	index = get_index(stack_b, find_biggest_smaller(stack_b, value));
+	dprintf(1, "????index du nb a mettre en haut B = %d??????\n\n", index);
 	if (index > size / 2)
 		cost = size - index;
 	else
 		cost = index;
-	//dprintf(1, "cost_order b = %d\n", cost);
+	dprintf(1, "cost_order b = %d\n", cost);
 	return (cost);
 }
 
@@ -88,7 +90,7 @@ int	cost_top_a(int argc, t_list_ps **stack_a, int index)
 		cost = size - index;
 	else
 		cost = index;
-	//dprintf(1, "cost top a = %d\n", cost);
+	dprintf(1, "cost top a = %d\n", cost);
 	return (cost);
 }
 
