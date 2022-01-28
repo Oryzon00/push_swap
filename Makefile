@@ -10,6 +10,7 @@ SRCS =	srcs/main.c \
 		srcs/algo.c \
 		srcs/solve.c \
 		srcs/cost.c \
+		srcs/algo_utils.c \
 		
 
 
@@ -19,9 +20,9 @@ CC = clang
 
 RM = rm -f
 
-DEBUG = -g3
+DEBUG = -g3 -fsanitize=address 
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g3 
 
 OPTI = -O3 -flto
 
