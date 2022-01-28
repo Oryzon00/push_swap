@@ -33,6 +33,9 @@ fonction  a coder:
 DONE -vider B
 
 
+A et B ne sont pas initialise
+
+
 
 
 
