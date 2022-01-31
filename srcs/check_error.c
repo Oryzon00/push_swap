@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 18:23:39 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/25 19:10:21 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/31 19:43:15 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	check_doublon(char **str)
 		{
 			if (ft_atoi(str[j]) == ft_atoi(str[i + j + 1]))
 			{
-				write(1, "Error\n", 6);
+				write(2, "Error\n", 6);
 				return (-1);
 			}
 			i++;
@@ -51,7 +51,7 @@ int	check_error(char **str)
 				j++;
 			else
 			{
-				write(1, "Error\n", 6);
+				write(2, "Error\n", 6);
 				return (-1);
 			}
 		}

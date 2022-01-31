@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:12:00 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/28 15:38:10 by ajung            ###   ########.fr       */
+/*   Updated: 2022/01/31 18:28:47 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,14 @@ void		solve(t_list_ps **stack_a, t_list_ps **stack_b, int argc);
 int			get_index(t_list_ps **stack_b, t_list_ps *biggest);
 int			get_cost(int argc, t_list_ps **stack_a, t_list_ps **stack_b,
 				int index);
+t_list_ps	*find_biggest_smaller(t_list_ps **stack_b, int value);
+t_list_ps	*if_not_found(t_list_ps **stack_b, int value);
+int			ft_lstsize(t_list_ps **stack);
+int			index_to_value(t_list_ps **stack, int index);
+void		put_min_on_top(t_list_ps **stack_a);
+
+
+
 
 /*Operateur*/
 void		sa(t_list_ps **stack_a);
@@ -49,5 +57,12 @@ void		rr(t_list_ps **stack_a, t_list_ps **stack_b);
 void		rra(t_list_ps **stack_a);
 void		rrb(t_list_ps **stack_b);
 void		rrr(t_list_ps **stack_a, t_list_ps **stack_b);
+
+
+
+
+//A suppr
+void	print_stack_a(t_list_ps **stack_a, t_list_ps **stack_b);
+
 
 #endif
