@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 18:13:17 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/31 21:01:42 by ajung            ###   ########.fr       */
+/*   Updated: 2022/02/01 18:02:39 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,29 +31,55 @@ int	get_index(t_list_ps **stack_b, t_list_ps *biggest)
 
 int	index_to_value(t_list_ps **stack, int index)
 {
-	t_list_ps *tmp;
+	t_list_ps	*tmp;
 
 	tmp = *stack;
-
 	while (index--)
 		tmp = tmp->next;
 	return (tmp->content);
 }
 
 //opti ici
+
+int	value_to_index(t_list_ps **stack, int value)
+{
+	t_list_ps	*tmp;
+	int			index;
+
+	index = 0;
+	tmp = *stack;
+	while (tmp->content != value)
+	{
+		index++;
+		tmp = tmp->next;
+	}
+	return (index);
+}
+
 void	put_min_on_top(t_list_ps **stack_a)
 {
 	t_list_ps	*tmp;
 	int			value_min;
+	int			index;
+	int			size;
 
 	tmp = *stack_a;
 	value_min = tmp->content;
-	while(tmp)
+	while (tmp)
 	{
 		if (value_min > tmp->content)
 			value_min = tmp->content;
 		tmp = tmp->next;
 	}
-	while((*stack_a)->content != value_min)
-		rra(stack_a);
+	index = value_to_index(stack_a, value_min);
+	size = ft_lstsize(stack_a);
+	if (index)
+	{
+		if (index > size / 2)
+			while ((size - index++ > 0))
+				rra(stack_a);
+		else
+			while (index--)
+				ra(stack_a);
+	}
 }

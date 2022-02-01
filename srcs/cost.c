@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 14:51:55 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/31 20:54:34 by ajung            ###   ########.fr       */
+/*   Updated: 2022/02/01 16:19:34 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,23 +64,16 @@ int	cost_order_b(t_list_ps **stack_b, int value)
 
 	if (!*stack_b)
 	{
-		//dprintf(1, "b est vide, cost order b = 0\n");
 		return (0);
 	}
 	size = ft_lstsize(stack_b);
-	////dprintf(1, "size de b = %d\n", size);
 	index = get_index(stack_b, find_biggest_smaller(stack_b, value));
-	//dprintf(1, "=====index du nb a mettre en haut B = %d=====\n", index);
 	if (index > size / 2)
 		cost = size - index;
 	else
 		cost = index;
-	//dprintf(1, "cost_order b = %d\n", cost);
 	return (cost);
 }
-
-// size - index -> rra
-// index -> ra
 
 int	cost_top_a(int argc, t_list_ps **stack_a, int index)
 {
@@ -89,13 +82,10 @@ int	cost_top_a(int argc, t_list_ps **stack_a, int index)
 
 	(void) stack_a;
 	size = argc - 1;
-	//////dprintf(1, "size = %d\n", size);
-	//////dprintf(1, "index recu dans cost a = %d\n", index);
 	if (index > size / 2)
 		cost = size - index;
 	else
 		cost = index;
-	//dprintf(1, "cost top a = %d\n", cost);
 	return (cost);
 }
 
@@ -114,6 +104,5 @@ int	get_cost(int argc, t_list_ps **stack_a, t_list_ps **stack_b, int index)
 	}
 	cost = cost_top_a(argc, stack_a, index)
 		+ cost_order_b(stack_b, elem_a->content);
-	////dprintf(1, "content elem_a = %d\n", elem_a->content);
 	return (cost);
 }

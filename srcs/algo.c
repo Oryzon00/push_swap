@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 19:05:39 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/31 19:20:34 by ajung            ###   ########.fr       */
+/*   Updated: 2022/02/01 16:20:51 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,6 @@ int	find_min(t_list_ps **stack_a)
 	}
 	return (min);
 }
-
-/*
-Pour solve 3
-132
-213
-231
-312
-321
-*/
 
 void	solve_3(t_list_ps **stack_a)
 {

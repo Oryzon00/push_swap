@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:19:05 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/31 17:31:02 by ajung            ###   ########.fr       */
+/*   Updated: 2022/02/01 16:21:29 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,10 @@ void	is_sorted(t_list_ps **stack)
 
 int	ft_lstsize(t_list_ps **stack)
 {
-	int	i;
-	t_list_ps *tmp;
+	int			i;
+	t_list_ps	*tmp;
 
 	tmp = *stack;
-
 	i = 0;
 	while (tmp)
 	{
@@ -71,18 +70,3 @@ int	ft_lstsize(t_list_ps **stack)
 	}
 	return (i);
 }
-
-// void	ft_lstadd_front(t_list **alst, t_list *new)
-// {
-// 	new->next = *alst;
-// 	*alst = new;
-// }
-
-// t_list	*ft_lstlast(t_list *lst)
-// {
-// 	while (lst && lst->next)
-// 	{
-// 		lst = lst->next;
-// 	}
-// 	return (lst);
-// }
