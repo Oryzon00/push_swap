@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 17:11:40 by ajung             #+#    #+#             */
-/*   Updated: 2022/01/26 16:55:15 by ajung            ###   ########.fr       */
+/*   Updated: 2022/02/01 17:24:37 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	parse_multiple(char **argv, t_list_ps **list)
 
 void	parse_arg(int argc, char **argv, t_list_ps **list)
 {
-	if (argc <= 2)
+	if (argc <= 1)
 		exit (0);
 	else
 		parse_multiple(argv, list);
